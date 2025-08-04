@@ -149,7 +149,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -257,28 +257,28 @@
 <li>最简单的绘制进化树</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ggtree(tr = tree)</span><br></pre></td></tr></table></figure>
-<p><img src="e822c129-2a3b-497d-8ac1-1c3d1e625ce2.png" alt="image"></p>
+<p><img src="/2025/08/03/2025-08-03-ggtree/e822c129-2a3b-497d-8ac1-1c3d1e625ce2.png" alt="image"></p>
 <ul>
 <li>忽略进化树枝长</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ggtree(tree, branch.length=&quot;none&quot;) # 去掉分支长度</span><br></pre></td></tr></table></figure>
-<p><img src="4f9b549a-856e-4b8e-a968-c8755ab9273d.png" alt="image"></p>
+<p><img src="/2025/08/03/2025-08-03-ggtree/4f9b549a-856e-4b8e-a968-c8755ab9273d.png" alt="image"></p>
 <ul>
 <li>显示进化树的tip标签</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggtree(tree)+</span><br><span class="line">    geom_tiplab(align = T) # align把标签对齐</span><br></pre></td></tr></table></figure>
-<p><img src="c9ecd44b-e0cb-455f-9a03-3beba135fc77.png" alt="image"></p>
+<p><img src="/2025/08/03/2025-08-03-ggtree/c9ecd44b-e0cb-455f-9a03-3beba135fc77.png" alt="image"></p>
 <ul>
 <li>显示进化树的node标签</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggtree(tree, aes(color=label)) + </span><br><span class="line">    geom_text()</span><br></pre></td></tr></table></figure>
-<p><img src="df09d3e4-8872-4513-ac2e-12e122ac39f5.png" alt="image"></p>
+<p><img src="/2025/08/03/2025-08-03-ggtree/df09d3e4-8872-4513-ac2e-12e122ac39f5.png" alt="image"></p>
 <ul>
 <li>给进化树不同组加上不同颜色的条带</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">ggtree(tree)+</span><br><span class="line">    #可以设置的参数还是挺多的，后面再包括色带的颜色，字体的颜色等等</span><br><span class="line">    geom_cladelab(node = 23,</span><br><span class="line">                  label = &quot;Group1&quot;,</span><br><span class="line">                  barcolor = &quot;blue&quot;,barsize = 2,</span><br><span class="line">                  horizontal=T,</span><br><span class="line">                  angle=90,</span><br><span class="line">                  textcolour = &quot;blue&quot;,</span><br><span class="line">                  vjust= 1,</span><br><span class="line">                  hjust = 0,</span><br><span class="line">                  textsize = 5,align = T,</span><br><span class="line">                  extend = 0.25,offset = -0.1)+</span><br><span class="line">    geom_cladelab(node = 16,label = &quot;Group2&quot;,</span><br><span class="line">                  barcolor = &quot;red&quot;,barsize = 2,</span><br><span class="line">                  extend = 0.25,offset = -0.1)+</span><br><span class="line">    geom_cladelab(node = 13,label = &quot;Outgroup&quot;,colour =&quot;red&quot;,</span><br><span class="line">                  barcolor = &quot;gray&quot;,barsize = 2,</span><br><span class="line">                  extend = 0.25,offset = -0.1)+</span><br><span class="line">    xlim(c(0,70))</span><br></pre></td></tr></table></figure>
 <p>上色node节点的选择是根据共同祖先来选的，比如选23，那么23的所有后代都会被染色。</p>
-<p><img src="25511654-7e0e-4068-8649-d7aad0e29cf3.png" alt="image"></p>
+<p><img src="/2025/08/03/2025-08-03-ggtree/25511654-7e0e-4068-8649-d7aad0e29cf3.png" alt="image"></p>
 
     </div>
 
@@ -302,9 +302,6 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025/08/04/2025-8-4-test/" rel="next" title="2025-8-4-test">
-                  2025-8-4-test <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
